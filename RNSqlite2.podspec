@@ -6,11 +6,11 @@ Pod::Spec.new do |s|
   s.description  = <<-DESC
                   RNSqlite2
                    DESC
-  s.homepage     = "https://github.com/craftzdog/react-native-sqlite-2"
+  s.homepage     = "https://github.com/venticake/react-native-sqlite-2"
   s.license      = "Apache 2.0"
   s.author       = { "author" => "hi@craftz.dog" }
   s.platform     = :ios, "7.0"
-  s.source       = { :git => "https://github.com/craftzdog/react-native-sqlite-2.git", :tag => "master" }
+  s.source       = { :git => "https://github.com/venticake/react-native-sqlite-2.git", :tag => "master" }
   s.source_files = "**/*.{h,m}"
   s.requires_arc = true
   s.library      = "sqlite3"
