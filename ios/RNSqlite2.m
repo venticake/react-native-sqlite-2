@@ -52,8 +52,10 @@ RCT_EXPORT_MODULE()
 }
 
 -(NSString*) getDatabaseDir {
-  NSString *libDir = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex: 0];
-  return [libDir stringByAppendingPathComponent:@"NoCloud"];
+  NSURL *containerURL = [[NSFileManager defaultManager] containerURLForSecurityApplicationGroupIdentifier:@"group.co.retrica.friday"];
+  return [[containerURL URLByAppendingPathComponent:@"NoCloud"] path];
+//  NSString *libDir = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex: 0];
+//  return [libDir stringByAppendingPathComponent:@"NoCloud"];
 }
 
 -(id) getPathForDB:(NSString *)dbName {
